@@ -1,0 +1,80 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <title>BloodWork</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div class="heading"><h2>Tatays Blood Work</h2></div>
+      <section class="main-view">
+        <form id="main-form" class="source-input">
+          <div class="indiv-inp">
+            <label>Date</label>
+            <input id="dateTaken" type="date" name="dateOfIntake" required />
+          </div>
+          <div class="indiv-inp">
+            <label>Time</label>
+            <select id="timeTaken">
+              <option value="curTime">Current Time</option>
+              <option value="customTime">Create custom time</option>
+            </select>
+          </div>
+          <div class="indiv-inp">
+            <!-- sugar input -->
+            <label>Blood Sugar</label
+            ><input
+              id="bloodSugar"
+              type="number"
+              placeholder="Eg. 110"
+              required
+            />
+          </div>
+          <div class="indiv-inp">
+            <!-- pressure input -->
+            <label>Blood Pressure</label
+            ><input
+              id="bloodPressure"
+              type="text"
+              placeholder="Eg. 120/80"
+              required
+            />
+          </div>
+          <div class="indiv-inp">
+            <label>before or after?</label>
+            <select id="prePostFood" class="eat-inp">
+              <option value="bb">Before Breakfast</option>
+              <option value="bd">Before Dinner</option>
+              <option value="bl">Before Lunch</option>
+              <option value="ab">After Breakfast</option>
+              <option value="ad">After Dinner</option>
+              <option value="al">After Lunch</option>
+            </select>
+          </div>
+          <div class="indiv-inp">
+            <input type="submit" value="Add" id="formAdd" @click="addItems" />
+          </div>
+        </form>
+        <hr />
+        <div class="main-table">
+          <div class="list-date list-column">Date</div>
+          <div class="list-time list-column">Time</div>
+          <div class="sugar list-column">Blood Sugar</div>
+          <div class="pressure list-column">Blood Pressure</div>
+          <div class="before-after-eat list-column">Before/After</div>
+        </div>
+        <div id="table-rows">
+          <div class="item-row" v-for="item in items">
+            <div class="list-column">{{ item.dateTaken }}</div>
+            <div class="list-column">{{ item.timeTaken }}</div>
+            <div class="list-column">{{ item.bloodSugar }}</div>
+            <div class="list-column">{{ item.bloodPressure }}</div>
+            <div class="list-column">{{ item.beforeAfter }}</div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="blood.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.heading {
+  width: 100%;
+}
+.source-input {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+}
+.main-table {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.item-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+#formAdd {
+  font-size: 16pt;
+  height: 60px;
+  padding: 0px 20px 0px 20px;
+}
+.indiv-inp {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 10px 0px 10px;
+}
+
+.main-view {
+  width: 80%;
+}
+
+/* list */
+.list-column {
+  width: 20%;
+  text-align: center;
+}

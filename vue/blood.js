@@ -4,14 +4,14 @@ new Vue({
     message: "Hello Vue.js!",
     items: [
       {
-        dateTaken: "Aug 8",
+        dateTaken: "2019-08-31",
         timeTaken: "8:00pm",
         bloodSugar: 110,
         bloodPressure: "120/80",
         beforeAfter: "BB"
       },
       {
-        dateTaken: "Aug 9",
+        dateTaken: "2019-09-01",
         timeTaken: "6:00pm",
         bloodSugar: 120,
         bloodPressure: "116/66",
@@ -29,11 +29,11 @@ new Vue({
       let beforeAfter = document.getElementById("prePostFood");
 
       this.items.push({
-        dateTaken: "Aug 9",
-        timeTaken: "6:00pm",
-        bloodSugar: 120,
-        bloodPressure: "116/66",
-        beforeAfter: "BD"
+        dateTaken: dateTaken.value,
+        timeTaken: timeInput.value,
+        bloodSugar: bloodSugar.value,
+        bloodPressure: bloodPressure.value,
+        beforeAfter: beforeAfter.value
       });
       dateTaken.value = "";
       timeTaken.value = "";
